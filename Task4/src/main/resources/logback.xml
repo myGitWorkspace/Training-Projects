@@ -13,35 +13,8 @@
 
 		</layout>
 	</appender>
-<!-- 
-	<logger name="com.andrew" level="debug">
-		<appender-ref ref="STDOUT" />
-	</logger>
-  -->
 
-	<!-- <logger name="org.hibernate.type" level="ALL" /> <logger name="org.hibernate" 
-		level="debug"> <appender-ref ref="STDOUT" /> </logger> -->
-
-	<!-- 
-	<logger name="org.springframework" level="debug">
-		<appender-ref ref="STDOUT" />
-	</logger>
-
-	<logger name="org.hibernate" level="debug">
-		<appender-ref ref="STDOUT" />
-	</logger>
- 	-->
- 
- <!-- 
-	<root level="debug">
-		<appender-ref ref="STDOUT" />
-	</root>
-	
-	 -->
-	
-	
-	
-		<appender name="FILE-AUDIT"
+	<appender name="FILE-AUDIT"
 		class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<file>${DEV_HOME}/debug.log</file>
 		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
