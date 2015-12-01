@@ -41,18 +41,7 @@ for(i=0; i<localeElems.length; i++) {
 		<tr>
 			<td>
 			<form:hidden path="answer[${status.index}].answerId" />
-				<!-- 	
-				<c:choose>
-					<c:when test="${numberCorrectAnswers == 1}">
-						<form:radiobutton path="answer[${status.index}].isCorrect" />
-					</c:when>
-					<c:otherwise>
-						<form:checkbox path="answer[${status.index}].isCorrect" id="answer[${status.index}].isCorrect" />
-					</c:otherwise>
-				</c:choose>
-				 -->
 				<form:checkbox path="answer[${status.index}].isCorrect" id="answer[${status.index}].isCorrect" />
-			
 			</td>
 			<td>
 			<form:label path="answer[${status.index}].answerText" id="answer[${status.index}].answerText">${answer.answerText}</form:label>
