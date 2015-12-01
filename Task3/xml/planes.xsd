@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pln:schema xmlns:pln="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.andrew.com/planes"
+xmlns:pn="http://www.andrew.com/planes" elementFormDefault="qualified">
+
+<pln:element name="planes">
+	<pln:complexType>
+		<pln:sequence>
+			<pln:element name="plane" type="pn:Plane" minOccurs="2" maxOccurs="unbounded" />
+		</pln:sequence>
+	</pln:complexType>
+</pln:element>
+
+<pln:complexType name="Plane">
+	<pln:sequence>
+		<pln:element name="model" type="pn:Model" />
+		<pln:element name="origin" type="pln:string" />
+		<pln:element name="price" type="pln:decimal" />
+		<pln:element name="chars" type="pn:Chars" />
+		<pln:element name="params" type="pn:Params" />
+	</pln:sequence>
+</pln:complexType>
+
+
+<pln:complexType name="Model">
+	<pln:simpleContent>
+		<pln:extension base="pln:string">
+			<pln:attribute name="modelId" type="pn:ModelId" use="required" />
+		</pln:extension>
+	</pln:simpleContent>
+</pln:complexType>
+
+
+<pln:simpleType name="ModelId">
+	<pln:restriction base="pln:ID">
+		<pln:pattern value="[a-zA-Z]{4}[0-9]{4}" />
+	</pln:restriction>
+</pln:simpleType>
+
+<pln:complexType name="Chars">
+	<pln:sequence>
+		<pln:element name="type" type="pn:Type" />
+		<pln:element name="places" type="pn:Places" />
+		<pln:element name="guns" type="pn:Guns" />
+		<pln:element name="radar" type="pn:Radar" />
+	</pln:sequence>
+</pln:complexType>
+
+<pln:simpleType name="Type">
+	<pln:restriction base="pln:string">
+		<pln:enumeration value="support"></pln:enumeration>
+		<pln:enumeration value="tracking"></pln:enumeration>
+		<pln:enumeration value="fighter"></pln:enumeration>
+		<pln:enumeration value="interceptor"></pln:enumeration>
+		<pln:enumeration value="scout"></pln:enumeration>
+	</pln:restriction>
+</pln:simpleType>
+
+<pln:simpleType name="Places">
+	<pln:restriction base="pln:integer">
+		<pln:enumeration value="1"></pln:enumeration>
+		<pln:enumeration value="2"></pln:enumeration>
+	</pln:restriction>
+</pln:simpleType>
+
+<pln:complexType name="Guns">
+	<pln:simpleContent>
+		<pln:extension base="pn:GunsAmount">
+			<pln:attribute name="present" type="pln:string" use="required"/>
+		</pln:extension>
+	</pln:simpleContent>
+</pln:complexType>
+
+<pln:simpleType name="GunsAmount">
+  <pln:union memberTypes="pln:decimal pn:EmptyString" />
+</pln:simpleType>
+
+<pln:simpleType name="EmptyString">
+  <pln:restriction base="pln:string">
+    <pln:enumeration value="" />
+  </pln:restriction>
+</pln:simpleType>
+
+<pln:simpleType name="Radar">
+	<pln:restriction base="pln:string">
+		<pln:enumeration value="yes"></pln:enumeration>
+		<pln:enumeration value="no"></pln:enumeration>
+	</pln:restriction>
+</pln:simpleType>
+
+<pln:complexType name="Params">
+	<pln:sequence>
+		<pln:element name="length" type="pln:float" />
+		<pln:element name="width" type="pln:float" />
+		<pln:element name="height" type="pln:float" />
+	</pln:sequence>
+</pln:complexType>
+
+</pln:schema>

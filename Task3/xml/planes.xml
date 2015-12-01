@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pln:planes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pln="http://www.andrew.com/planes"
+xsi:schemaLocation="http://www.andrew.com/planes planes.xsd">
+
+<pln:plane>  <!--   Bombardier Dash 8-100  British Aerospace Avro RJ 70 Dornier Do-228  Dougas DC-6 -->
+
+<pln:model modelId="asdf1234">Boeing 777-300</pln:model>
+<pln:origin>Germany</pln:origin>
+<pln:price>590</pln:price>
+
+<pln:chars>
+<pln:type>support</pln:type> <!-- (tracking, fighter,interceptor,scout) -->
+<pln:places>2</pln:places>  <!-- 1,2 -->
+<pln:guns present="no"></pln:guns>   <!-- yes,no (is yes - rocket[0-10]) -->
+<pln:radar>yes</pln:radar>  <!-- yes,no -->
+</pln:chars>
+
+<pln:params>
+<pln:length>32.3</pln:length>
+<pln:width>20.5</pln:width>
+<pln:height>10.4</pln:height>
+</pln:params>
+
+</pln:plane>
+
+
+<pln:plane>
+
+<pln:model modelId="acgj4562">Bombardier Dash 8-100</pln:model>
+<pln:origin>England</pln:origin>
+<pln:price>570</pln:price>
+
+<pln:chars>
+<pln:type>tracking</pln:type>
+<pln:places>1</pln:places>
+<pln:guns present="yes" >5</pln:guns>    
+<pln:radar>no</pln:radar>
+</pln:chars>
+
+<pln:params>
+<pln:length>31.3</pln:length>
+<pln:width>24.7</pln:width>
+<pln:height>12.3</pln:height>
+</pln:params>
+
+</pln:plane>
+
+
+<pln:plane>
+
+<pln:model modelId="vkry2468">British Aerospace</pln:model>
+<pln:origin>France</pln:origin>
+<pln:price>594</pln:price>
+
+<pln:chars>
+<pln:type>fighter</pln:type>
+<pln:places>2</pln:places>
+<pln:guns present="yes" >9</pln:guns>    
+<pln:radar>yes</pln:radar>
+</pln:chars>
+
+<pln:params>
+<pln:length>36.3</pln:length>
+<pln:width>25.8</pln:width>
+<pln:height>12.7</pln:height>
+</pln:params>
+
+</pln:plane>
+
+
+<pln:plane>
+
+<pln:model modelId="xgjl3385">Dornier Do-228</pln:model>
+<pln:origin>Spain</pln:origin>
+<pln:price>537</pln:price>
+
+<pln:chars>
+<pln:type>interceptor</pln:type>
+<pln:places>1</pln:places>
+<pln:guns present="no" ></pln:guns>    
+<pln:radar>no</pln:radar>
+</pln:chars>
+
+<pln:params>
+<pln:length>35.3</pln:length>
+<pln:width>26.8</pln:width>
+<pln:height>13.7</pln:height>
+</pln:params>
+
+</pln:plane>
+
+<pln:plane>          
+
+<pln:model modelId="bgfr4257">Dougas DC-6</pln:model>
+<pln:origin>Italy</pln:origin>
+<pln:price>547</pln:price>
+
+<pln:chars>
+<pln:type>scout</pln:type>
+<pln:places>2</pln:places>
+<pln:guns present="yes" >9</pln:guns>    
+<pln:radar>yes</pln:radar>
+</pln:chars>
+
+<pln:params>
+<pln:length>34.5</pln:length>
+<pln:width>28.7</pln:width>
+<pln:height>13.7</pln:height>
+</pln:params>
+
+</pln:plane>
+
+
+</pln:planes>
